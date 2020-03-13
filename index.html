@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="" />
+</head>
+<body>
+    <h1>Olhar no Console</h1>
+
+
+    <script>
+        
+  function Product(id, name, price){
+      this.id = id;
+      this.name = name;
+      this.price = price;
+  }
+ console.log(Product)
+ var produto = new Product(1, "Produto 1", 2.99);
+console.log(produto);
+  function CartItem(product, quantity, price){
+      this.product = Product;
+      this.number = number;
+      this.price = price;
+  }
+ var produtoItem= new CartItem(produto, 2, 2);
+console.log(produtoItem);
+  function Cart(items){
+      this.items = []
+  }
+
+Cart.prototype = {
+    addItem: function(item) { this.items.push(item)},
+    removeItem: function(item) { this.items = this.items.filter(function(product) { return item.produto.id !== product.produto.id})},
+    calculaTotal: function() { var total = 0; this.items.forEach((item) => total+=item.price); return total}
+}
+      
+        
+    </script>
+</body>
+</html>
